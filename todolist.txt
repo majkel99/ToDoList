@@ -1,0 +1,3 @@
+buy groceries,true
+call doctor,false
+buy car,false
