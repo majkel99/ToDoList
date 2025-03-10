@@ -10,7 +10,7 @@ public class FileHandler {
         try (FileWriter fileWriter = new FileWriter(filename);
              BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);){
             for(Task task: tasks){
-                bufferedWriter.write(task.getDescription() + "," + task.getCompleted());
+                bufferedWriter.write(task.getDescription() + ";" + task.getCompleted());
                 bufferedWriter.newLine();
             }
             System.out.println("Tasks saved to file.");
@@ -24,7 +24,7 @@ public class FileHandler {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
             while((line=reader.readLine())!=null){
-                String [] parts = line.split(",");
+                String [] parts = line.split(";");
                 String description = parts[0];
                 boolean isCompleted = Boolean.parseBoolean(parts[1]);
                 Task task = new Task(description);

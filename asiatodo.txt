@@ -1,0 +1,3 @@
+znajdz pasje,false
+nauczyc sie czegos praktycznego w pracy,false
+umyc podloge,true
